@@ -3,11 +3,12 @@ package com.example.dataBase.userManager
 import com.example.dataBase.model.UserModel
 import com.example.dataBase.model.UserResponseModel
 import io.ktor.application.*
+import io.ktor.response.*
 import io.ktor.routing.*
 
 
 fun Route.userRouting() {
-    get() {  }
+    get("/h") { call.respondText("eeeee") }
     post() {  }
     post() {  }
 }

@@ -1,1 +1,1 @@
-rootProject.name = "Front"
+rootProject.name = "testDocker"
