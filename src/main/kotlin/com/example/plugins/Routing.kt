@@ -1,6 +1,7 @@
 package com.example.plugins
 
 import com.example.dataBase.userManager.reristrationBlock
+import com.example.front.homePageRouting
 import io.ktor.routing.*
 import io.ktor.http.*
 import io.ktor.http.content.*
@@ -22,4 +23,5 @@ fun Application.configureRouting() {
         }
     }
     reristrationBlock()
+    homePageRouting()
 }

@@ -1,6 +1,7 @@
 package com.example.plugins
 
 import freemarker.cache.*
+import freemarker.core.HTMLOutputFormat
 import io.ktor.freemarker.*
 import io.ktor.html.*
 import kotlinx.html.*
@@ -14,13 +15,14 @@ import io.ktor.routing.*
 fun Application.configureTemplating() {
     install(FreeMarker) {
         templateLoader = ClassTemplateLoader(this::class.java.classLoader, "templates")
+        outputFormat = HTMLOutputFormat.INSTANCE
     }
 
 
 
-    routing {
+/*    routing {
         get("/html-freemarker") {
-            call.respond(FreeMarkerContent("index.ftl", mapOf("data" to IndexData(listOf(1, 2, 3))), ""))
+            call.respond(FreeMarkerContent("index.ftl", map))
         }
         get("/html-dsl") {
             call.respondHtml {
@@ -59,11 +61,11 @@ fun Application.configureTemplating() {
             }
         }
     }
-}
+}*/
 
-data class IndexData(val items: List<Int>)
+/*data class IndexData(val items: List<Int>)
 
 suspend inline fun ApplicationCall.respondCss(builder: CSSBuilder.() -> Unit) {
-    this.respondText(CSSBuilder().apply(builder).toString(), ContentType.Text.CSS)
+    this.respondText(CSSBuilder().apply(builder).toString(), ContentType.Text.CSS)*/
 }
 
