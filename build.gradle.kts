@@ -5,6 +5,9 @@ val logback_version: String by project
 plugins {
     application
     kotlin("jvm") version "1.6.10"
+    `maven-publish`
+    `java-library`
+    signing
 }
 
 group = "com.example"
@@ -14,21 +17,33 @@ application {
 
 }
 
+
 repositories {
     mavenCentral()
     maven { url = uri("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/kotlin-js-wrappers") }
+    maven {
+        url =
+            uri("https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-debug/1.6.0/kotlinx-coroutines-debug-1.6.0.jar'")
+    }
+
+    dependencies {
+        implementation("io.ktor:ktor-server-core:$ktor_version")
+        implementation("io.ktor:ktor-server-sessions:$ktor_version")
+        implementation("io.ktor:ktor-server-host-common:$ktor_version")
+        implementation("io.ktor:ktor-freemarker:$ktor_version")
+        implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.7.3")
+        implementation("io.ktor:ktor-html-builder:$ktor_version")
+        implementation("org.jetbrains:kotlin-css-jvm:1.0.0-pre.129-kotlin-1.4.20")
+        implementation("io.ktor:ktor-server-netty:$ktor_version")
+        implementation("ch.qos.logback:logback-classic:$logback_version")
+        testImplementation("io.ktor:ktor-server-tests:$ktor_version")
+        testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+        implementation("org.jetbrains.exposed", "exposed-core", "0.37.3")
+        implementation("org.jetbrains.exposed", "exposed-dao", "0.37.3")
+        implementation("org.jetbrains.exposed", "exposed-jdbc", "0.37.3")
+
+        // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+        implementation("mysql:mysql-connector-java:8.0.27")
+    }
 }
 
-dependencies {
-    implementation("io.ktor:ktor-server-core:$ktor_version")
-    implementation("io.ktor:ktor-server-sessions:$ktor_version")
-    implementation("io.ktor:ktor-server-host-common:$ktor_version")
-    implementation("io.ktor:ktor-freemarker:$ktor_version")
-    implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.7.3")
-    implementation("io.ktor:ktor-html-builder:$ktor_version")
-    implementation("org.jetbrains:kotlin-css-jvm:1.0.0-pre.129-kotlin-1.4.20")
-    implementation("io.ktor:ktor-server-netty:$ktor_version")
-    implementation("ch.qos.logback:logback-classic:$logback_version")
-    testImplementation("io.ktor:ktor-server-tests:$ktor_version")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
-}

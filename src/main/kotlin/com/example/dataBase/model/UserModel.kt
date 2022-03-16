@@ -13,5 +13,5 @@ data class UserModel(
     val email: String,
     val login: String,
     val password: String,
-    val token: Int,
+    val token: String,
 )
