@@ -13,10 +13,6 @@ fun main() {
         configureTemplating()
         configureSecurity()
     }.start(wait = true)
-    Database.connect(
-        "jdbc:h2:mem:test", driver = "org.h2.Driver",
+    Database.connect("jdbc:mysql://localhost:8080/test", driver = "com.mysql.cj.jdbc.Driver",
         user = "root", password = "root")
-    Database.connect({DriverManager.getConnection("jdbc:h2:mem:test;MODE=MySQL")})
-
-
 }
