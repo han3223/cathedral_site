@@ -5,6 +5,10 @@ import io.ktor.server.netty.*
 import com.example.plugins.*
 import org.jetbrains.exposed.sql.Database
 import java.sql.DriverManager
+import java.sql.ResultSet
+import java.sql.SQLException
+import java.sql.Statement
+import java.util.*
 
 
 fun main() {
@@ -13,6 +17,4 @@ fun main() {
         configureTemplating()
         configureSecurity()
     }.start(wait = true)
-    Database.connect("jdbc:mysql://localhost:8080/test", driver = "com.mysql.cj.jdbc.Driver",
-        user = "root", password = "root")
 }
