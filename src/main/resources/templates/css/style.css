@@ -1,10 +1,25 @@
 <style type="text/css">
 
-#one{
-    width: 100px;
-    height: 100px;
-    background-color: black;
+*{
+    box-sizing: border-box;
                       }
+body{
+    margin: 0;
+                      }
+.header{
+    margin-top: 30px;
+    margin-bottom: 150px;
+                      }
+.image_logo{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-right: 15px;
+}
+.logo{
+    display: inline-block;
+    color: #002fa7;
+}
 
 
 
