@@ -3,12 +3,8 @@ package com.example
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import com.example.plugins.*
-import org.jetbrains.exposed.sql.Database
-import java.sql.DriverManager
-import java.sql.ResultSet
-import java.sql.SQLException
-import java.sql.Statement
-import java.util.*
+import io.ktor.http.content.*
+import io.ktor.routing.*
 
 
 fun main() {
@@ -18,3 +14,4 @@ fun main() {
         configureSecurity()
     }.start(wait = true)
 }
+
