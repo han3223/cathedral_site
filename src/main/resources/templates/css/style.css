@@ -5,11 +5,16 @@
                       }
 body{
     margin: 0;
+    font-family: 'Tahoma', sans-serif;
                       }
 .header{
     margin-top: 30px;
     margin-bottom: 150px;
+    vertical-align: middle;
                       }
+.section{
+    vertical-align: middle;
+}
 .image_logo{
     width: 25px;
     height: 25px;
@@ -19,9 +24,124 @@ body{
 .logo{
     display: inline-block;
     color: #002fa7;
+    font-size: 20px;
+    font-weight: 700;
 }
-
-
-
+.color-text{
+    text-align: center;
+}
+.link_text{
+    text-decoration: none;
+    color: #222022;
+    font-size: 16px;
+    font-weight: 400;
+}
+.button_header{
+    text-align: center;
+}
+.button{
+    color: #222022;
+    border: 2px solid #222022;
+    background-color: white;
+    padding: 6px 43px;
+}
+button:hover{
+    background-color: #002fa7;
+    color: white;
+    border: 2px solid white;
+}
+.box-1{
+    vertical-align: middle;
+}
+.box-2{
+    vertical-align: middle;
+}
+.title-text{
+    color: #002fa7;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.subtitle{
+    color: #002fa7;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.button-0{
+    color: #222022;
+    border: 2px solid #222022;
+    background-color: white;
+    padding: 6px 43px;
+}
+.button-0_0{
+    text-align: center;
+}
+.images{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+.images_1{
+    display: inline-block;
+    text-align: center;
+    margin-left: 42%;
+    margin-bottom: 20px;
+}
+.title-text2{
+    color: #002fa7;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+}
+.subtitle2{
+    color: #002fa7;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.buttons-1{
+    color: white;
+    border: 2px solid #222022;
+    background-color: #002fa7;
+    padding: 6px 6px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.buttons-2{
+    color: #222022;
+    border: 2px solid #222022;
+    background-color: white;
+    padding: 6px 43px;
+    border-radius: 10px;
+}
+.buttons{
+    text-align: center;
+}
+.button_img{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}
+.button_text{
+    display: inline-block;
+    font-size: 20px;
+}
+.button_img{
+    display: inline-block;
+}
+.box_button_1{
+    display: inline-block;
+    vertical-align: middle;
+}
+.box_button_2{
+    display: inline-block;
+    vertical-align: middle;
+}
 
 </style>
