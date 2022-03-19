@@ -1,10 +1,9 @@
 package com.example
 
+
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import com.example.plugins.*
-import io.ktor.http.content.*
-import io.ktor.routing.*
 
 
 fun main() {

@@ -1,17 +1,6 @@
 package com.example.dataBase.model
 
-data class UserResponseModel(
-    val fio: String,
-    val email: String,
-    val login: String,
-    val password: String,
-)
+data class AutorizationUser(val fio: String, val email: String, val login: String, val password: String, val token: String)
 
-data class UserModel(
-    val id: Int,
-    val fio: String,
-    val email: String,
-    val login: String,
-    val password: String,
-    val token: String,
-)
+val emptyUser = mutableListOf(AutorizationUser("", "", "", "", ""))
+

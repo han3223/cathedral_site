@@ -12,7 +12,7 @@ import java.util.*
 
 
 fun Route.homePage(){
-    get("/front") {
+    get("/") {
         call.respond(FreeMarkerContent("front.ftl", map))
     }
 }

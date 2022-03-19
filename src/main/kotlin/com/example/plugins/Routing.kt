@@ -1,11 +1,11 @@
 package com.example.plugins
 
-import com.example.dataBase.userManager.reristrationBlock
+import com.example.dataBase.registrationUser.addNewUser
+import com.example.dataBase.registrationUser.check
 import com.example.front.homePageRouting
 import io.ktor.routing.*
 import io.ktor.http.content.*
 import io.ktor.application.*
-import io.ktor.response.*
 
 fun Application.configureRouting() {
 
@@ -16,6 +16,7 @@ fun Application.configureRouting() {
             resources("static")
         }
     }
-    reristrationBlock()
+    addNewUser()
+    check()
     homePageRouting()
 }
