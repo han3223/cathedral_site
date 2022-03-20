@@ -1,7 +1,8 @@
 package com.example.plugins
 
-import com.example.dataBase.registrationUser.addNewUser
-import com.example.dataBase.registrationUser.check
+import com.example.dataBase.inputRegistration.addNewUser
+import com.example.dataBase.inputRegistration.check
+import com.example.dataBase.inputRegistration.logedInUser
 import com.example.front.homePageRouting
 import io.ktor.routing.*
 import io.ktor.http.content.*
@@ -18,5 +19,6 @@ fun Application.configureRouting() {
     }
     addNewUser()
     check()
+    logedInUser()
     homePageRouting()
 }

@@ -1,4 +1,4 @@
-package com.example.dataBase.registrationUser
+package com.example.dataBase.inputRegistration
 
 import addUser
 import com.example.dataBase.model.AutorizationUser
